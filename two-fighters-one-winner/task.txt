@@ -1,0 +1,16 @@
+Your function also receives a third argument, a string, with the name of the fighter that attacks first.
+
+Example:
+  declare_winner(Fighter("Lew", 10, 2), Fighter("Harry", 5, 4), "Lew") => "Lew"
+  
+  Lew attacks Harry; Harry now has 3 health.
+  Harry attacks Lew; Lew now has 6 health.
+  Lew attacks Harry; Harry now has 1 health.
+  Harry attacks Lew; Lew now has 2 health.
+  Lew attacks Harry: Harry now has -1 health and is dead. Lew wins.
+function Fighter(name, health, damagePerAttack) {
+        this.name = name;
+        this.health = health;
+        this.damagePerAttack = damagePerAttack;
+        this.toString = function() { return this.name; }
+}
